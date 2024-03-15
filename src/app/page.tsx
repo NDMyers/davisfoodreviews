@@ -28,7 +28,10 @@ const page: FC<pageProps> = ({ }) => {
             <a>
               there is a lot of food in davis,
               <br></br>
-              lets find the <span className='text-amber-700 hover:cursor-pointer'>best</span>
+              lets find the 
+              <span className='text-amber-700 hover:cursor-pointer hover:text-[rgb(131,188,148)]'>
+                <Link className="" href="/home"> best</Link>
+              </span>
             </a>
             <div className="flex mt-20 text-2xl">
               <Image
@@ -41,7 +44,7 @@ const page: FC<pageProps> = ({ }) => {
               />
               <Circle fill="rgb(131,188,148)" className="mt-16 text-transparent size-4 animate-bounce"/>
               <Circle fill="rgb(131,188,148)" className="mt-12 text-transparent size-5 animate-bounce"/>
-              <button className="ml-2 rounded-2xl bg-[rgb(131,188,148)] h-14 w-48 shadow-xl border-4 border-[rgb(109,161,125)] animate-bounce tracking-wider mt-3 hover:cursor-pointer">
+              <button className="ml-2 rounded-2xl bg-[rgb(131,188,148)] h-14 w-48 shadow-xl border-4 border-[rgb(109,161,125)] animate-bounce tracking-wider mt-3 hover:cursor-pointer hover:border-amber-700">
                 <Link className="px-5" href="/home">LETS GO</Link>
               </button>
             </div>

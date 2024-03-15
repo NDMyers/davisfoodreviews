@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import Image from "next/image";
+import TopFiveEntry from '../components/TopFiveEntry';
 
 interface AboutProps {
   
@@ -8,11 +9,14 @@ interface AboutProps {
 const About: FC<AboutProps> = ({}) => {
   return (
 
-    <div id="homepage" className="rounded-3xl w-full max-w-[120rem] flex flex-col items-center justify-evenly pt-4 lg:pt-0">
+    <div id="homepage" className="rounded-3xl w-full max-w-[120rem] min-h-screen flex flex-col items-center justify-evenly lg:pt-0">
 
-
-
-
+        <TopFiveEntry shopName='1. akira' />
+        <TopFiveEntry shopName='2. yangkee dumpling' />
+        <TopFiveEntry shopName='3. bonchon' />
+        <TopFiveEntry shopName='4. mikunis ' />
+        <TopFiveEntry shopName='5. chipotle' />
+                        
 
 
 
