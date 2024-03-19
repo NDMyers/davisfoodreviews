@@ -18,7 +18,7 @@ const [currentPage, setCurrentPage] = useState<'about' | 'work' | 'resume'>('abo
 
   return (
 
-    <main className="flex min-h-screen flex-col items-center justify-between overflow-x-hidden overflow-y-auto px-8 pt-8 bg-[rgb(255,243,232)] lg:px-10 lg:pt-10">
+    <main className="flex min-h-screen flex-col items-center justify-between overflow-x-hidden overflow-y-auto px-8 p-8 bg-[rgb(255,243,232)] lg:px-10 lg:p-10">
 
       {/* Color bar? */}
       {/* <div className="w-full min-h-12 absolute top-0 bg-[#2b2525] lg:min-h-20">
@@ -49,8 +49,9 @@ const [currentPage, setCurrentPage] = useState<'about' | 'work' | 'resume'>('abo
       {currentPage === 'resume' && <ResumePage />}
 
       {/* footer */}
-      <div className='min-w-screen w-full relative bg-indigo-300'>
-        <a> -- </a>
+      <div className='flex flex-col items-center justify-between min-w-screen w-full text-sm text-emerald-700 lg:flex-row'>
+        <a href='https://ohnotype.co/fonts/vulf' className='hover:text-emerald-500'> font via ohnotype.co  </a>
+        <a> last updated 3.19.2024 </a>
       </div>
         
     </main>
