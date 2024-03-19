@@ -5,17 +5,16 @@ import { FC, useEffect, useState } from 'react';
 import NavBar from "./components/NavBar";
 import About from "./about/page";
 import Work from "./work/page";
-import ResumePage from "./resume/page";
-import { render } from "react-dom";
+import ResumePage from "./help/page";
 import { ArrowDown, Circle, MessageCircleDashed } from "lucide-react";
 import Link from "next/link";
 
 
-interface pageProps {
+interface PageProps {
 
 }
 
-const page: FC<pageProps> = ({ }) => {
+const Page: FC<PageProps> = ({ }) => {
 
   const [currentPage, setCurrentPage] = useState<'about' | 'work' | 'resume'>('about');
 
@@ -57,4 +56,4 @@ const page: FC<pageProps> = ({ }) => {
   )
 }
 
-export default page
+export default Page
