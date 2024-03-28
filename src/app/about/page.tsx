@@ -63,13 +63,17 @@ const About: FC<AboutProps> = ({}) => {
                     <Star className='fill-yellow-500' />
                 </div>
             </div>
-            <a className='pt-4 text-base'>One of the few in Davis maintaining the affordability and quality every boba shop should have.</a>
+            <a className='pt-4 text-lg'>
+                When your boba bill hits above 10 dollars and tastes that mid, its time to go to Akira.
+                <br></br><br></br>
+                <span className='text-green-600'>Affordability</span>, great flavors and variety are their specialty.
+            </a>
 
             <motion.div
                 variants={clickedVariants}
                 initial={false}
                 animate={clickedOne? "open" : "closed"}
-                className={clickedOne? 'flex flex-col items-center mt-12 text-center w-full max-w-[120rem]' : 'w-0 h-0' }
+                className={clickedOne? 'flex flex-col items-center mt-8 text-center w-full max-w-[120rem]' : 'w-0 h-0' }
             >
                 <motion.a variants={itemVariants}>OUR RECS</motion.a>
                 <motion.div className='flex justify-evenly w-full' variants={itemVariants}>
@@ -81,7 +85,7 @@ const About: FC<AboutProps> = ({}) => {
                             width={200}
                             height={100}
                         />
-                        <a>hokkaido milk tea</a>
+                        <a>Hokkaido milk tea</a>
                     </div>
                     <div>
                         <Image 
@@ -91,13 +95,13 @@ const About: FC<AboutProps> = ({}) => {
                             width={200}
                             height={100}
                         />
-                        <a>taro smoothie</a>
+                        <a>Taro smoothie</a>
                     </div>                       
                 </motion.div>
             </motion.div>
         </motion.div>
 
-        <motion.div className='flex flex-col justify-between items-center pt-10 pb-20 pl-5 mt-2 rounded-lg hover:cursor-pointer' 
+        <motion.div className='flex flex-col justify-between items-left pt-10 pb-20 pl-5 mt-2 rounded-lg hover:cursor-pointer' 
             whileHover={{ backgroundColor: "#ECDACC"}}
             transition={{ duration: 0.6 }}
             onClick={()=>setClickedTwo(!clickedTwo)}
@@ -112,7 +116,9 @@ const About: FC<AboutProps> = ({}) => {
                     <Star className='fill-yellow-500' />
                 </div>
             </div>
-            <a className='pt-4 text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+            <a className='pt-4 text-lg'>
+                The <span className="text-green-600">only</span> quality xiao long bao around. Otherwise, get ready for a drive.
+            </a>
             {clickedTwo && 
                 <motion.div
                     className='flex mt-4'
@@ -136,7 +142,11 @@ const About: FC<AboutProps> = ({}) => {
                     <Star className='fill-yellow-500' />
                 </div>
             </div>
-            <a className='pt-4 text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+            <a className='pt-4 text-lg'>
+                Good vibes, great friends, <span className='text-green-600'>grand</span> tacos.
+                <br></br><br></br>
+                Otherwise, head to Guads on Covell for a more authentic take.
+            </a>
         </motion.div>
 
         <motion.div className='flex flex-col justify-between pb-20 pl-5 pt-10 mt-2 rounded-lg'
@@ -152,7 +162,7 @@ const About: FC<AboutProps> = ({}) => {
                     <Star className='fill-yellow-500' />
                 </div>
             </div>
-            <a className='pt-4 text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+            <a className='pt-4 text-lg'>Although their prices are reaching the outer atmospheres, no other sushi place in Davis beats it in <span className='text-green-600'>atmosphere and consistency.</span></a>
         </motion.div>
 
         <motion.div className='flex flex-col justify-between pb-20 pl-5 mt-2 pt-10 rounded-lg'
@@ -160,14 +170,18 @@ const About: FC<AboutProps> = ({}) => {
             transition={{ duration: 0.6 }}
         >
             <div className='flex flex-col justify-between w-full md:flex-row md:items-center '>
-                <TopFiveEntry shopName='5. TIMS HAWAIIAN' location='516 2nd St, Davis, CA 95616' />
+                <TopFiveEntry shopName='5. TIMS HAWAIIAN D.T.' location='516 2nd St, Davis, CA 95616' />
                 <div className='flex flex-row pr-5 pt-2 md:pt-0'>
                     <Star className='fill-yellow-500' />
                     <Star className='fill-yellow-500' />
                     <Star className='fill-yellow-500' />
                 </div>
             </div>
-            <a className='pt-4 text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+            <a className='pt-4 text-lg'>
+                Simply put go get their 10 dollar entree deal when its Monday to Wednesday.
+                <br></br><br></br>
+                <span className='text-green-600'>Affordable comfort food </span>at its finest.
+            </a>
         </motion.div>
 
     </div>
