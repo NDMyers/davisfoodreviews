@@ -6,6 +6,7 @@ import Image from 'next/image';
 import About from '../about/page';
 import Work from '../work/page';
 import ResumePage from '../help/page';
+import { motion } from "framer-motion";
 
 interface pageProps {
   
@@ -23,8 +24,11 @@ const [currentPage, setCurrentPage] = useState<'about' | 'work' | 'resume'>('abo
       {/* Logo, name, and NavBar */}
       <div className="flex flex-col w-full max-w-[120rem] items-center justify-between lg:flex-row">
         {/* Logo and name section */}
-        <div  className="flex flex-col items-center rounded-lg px-8 border border-transparent transition-colors hover:cursor-pointer hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 lg:flex-row lg:pr-8 lg:pl-0"
+        <motion.div className="flex flex-col items-center rounded-lg px-8 border border-transparent hover:cursor-pointer  hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 lg:flex-row lg:pr-8 lg:pl-0"
               onClick={()=>setCurrentPage('about')}
+              whileHover = {{ 
+                y: -5
+              }}
         >
           <Image
                 src="/frog.png"
@@ -35,7 +39,7 @@ const [currentPage, setCurrentPage] = useState<'about' | 'work' | 'resume'>('abo
                 priority
           />
           <a className="text-xl lg:pl-4"><span className="text-green-600">DAVIS</span> FOOD REVIEWS</a>
-        </div>
+        </motion.div>
         <NavBar setCurrentPage={setCurrentPage} />
       </div>
 
@@ -46,7 +50,7 @@ const [currentPage, setCurrentPage] = useState<'about' | 'work' | 'resume'>('abo
         {currentPage === 'resume' && <ResumePage />}
 
         {/* footer */}
-        <div className='flex flex-col items-center justify-between w-full max-w-[120rem] text-sm text-emerald-700 lg:flex-row'>
+        <div className='flex flex-col mt-2 items-center justify-between w-full max-w-[120rem] text-sm text-emerald-700 lg:flex-row'>
           <a href='https://ohnotype.co/fonts/vulf' className='hover:text-emerald-500'> font via ohnotype.co  </a>
           <a> last updated 3.19.2024 </a>
         </div>
