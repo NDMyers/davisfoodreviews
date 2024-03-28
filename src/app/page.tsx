@@ -24,14 +24,11 @@ const Page: FC<PageProps> = ({ }) => {
 
         {/* Who are we section */}
         <div className='flex flex-col justify-center items-center text-7xl min-h-screen tracking-tighter text-center'>
-            <a>
+            <div>
               there is a lot of food in davis,
               <br></br>
-              lets find the 
-              <span className='text-amber-700 hover:cursor-pointer hover:text-[rgb(131,188,148)]'>
-                <Link className="" href="/home"> best</Link>
-              </span>
-            </a>
+              lets find the<span className='text-amber-700 hover:cursor-pointer hover:text-[rgb(131,188,148)]'><Link className="" href="/home"> best</Link></span>
+            </div>
             <div className="flex mt-20 text-2xl">
               <Image
                   src="/frog.png"

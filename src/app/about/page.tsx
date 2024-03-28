@@ -1,7 +1,10 @@
+'use client'
+
 import { FC } from 'react'
 import Image from "next/image";
 import TopFiveEntry from '../components/TopFiveEntry';
-import { Star, StarHalf } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { motion } from "framer-motion";
 
 interface AboutProps {
   
@@ -12,7 +15,10 @@ const About: FC<AboutProps> = ({}) => {
 
     <div id="homepage" className="rounded-3xl w-full max-w-[120rem] min-h-screen flex flex-col">
 
-        <div className='flex flex-col justify-between pt-10 pb-20'>
+        <motion.div className='flex flex-col justify-between pt-10 pb-20 rounded-lg'
+            whileHover={{ marginBottom: "18rem" }}
+            transition={{ type: "spring", duration: 2 }}
+        >
             <div className='flex justify-between items-center w-full'>
                 <TopFiveEntry shopName='1. AKIRA' location='620 W Covell Blvd STE A, Davis, CA 95616'/>
                 <div className='flex flex-row'>
@@ -24,9 +30,12 @@ const About: FC<AboutProps> = ({}) => {
                 </div>
             </div>
             <a className='pt-4 text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
-        </div>
+        </motion.div>
 
-        <div className='flex flex-col justify-between pb-20'>
+        <motion.div className='flex flex-col justify-between pb-20' 
+            whileHover={{ marginBottom: "18rem" }}
+            transition={{ type: "spring", duration: 2 }}
+        >
             <div className='flex justify-between items-center w-full'>
                 <TopFiveEntry shopName='2. YANGKEE DUMPLING' location='2151 Cowell Blvd C, Davis, CA 95618' />
                 <div className='flex flex-row'>
@@ -38,9 +47,12 @@ const About: FC<AboutProps> = ({}) => {
                 </div>
             </div>
             <a className='pt-4 text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
-        </div>
+        </motion.div>
 
-        <div className='flex flex-col justify-between pb-20'>
+        <motion.div className='flex flex-col justify-between pb-20'
+            whileHover={{ marginBottom: "18rem" }}
+            transition={{ type: "spring", duration: 2 }}
+        >
             <div className='flex justify-between items-center w-full'>
                 <TopFiveEntry shopName='3. GUADS' location='231 3rd St, Davis, CA 95616' />
                 <div className='flex flex-row'>
@@ -51,9 +63,12 @@ const About: FC<AboutProps> = ({}) => {
                 </div>
             </div>
             <a className='pt-4 text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
-        </div>
+        </motion.div>
 
-        <div className='flex flex-col justify-between pb-20'>
+        <motion.div className='flex flex-col justify-between pb-20'
+            whileHover={{ marginBottom: "18rem" }}
+            transition={{ type: "spring", duration: 2 }}
+        >
             <div className='flex justify-between items-center w-full'>
                 <TopFiveEntry shopName='4. MIKUNIS' location='500 1st St 19, Davis, CA 95616'/>
                 <div className='flex flex-row'>
@@ -64,9 +79,12 @@ const About: FC<AboutProps> = ({}) => {
                 </div>
             </div>
             <a className='pt-4 text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
-        </div>
+        </motion.div>
 
-        <div className='flex flex-col justify-between pb-20'>
+        <motion.div className='flex flex-col justify-between pb-20'
+            whileHover={{ marginBottom: "18rem" }}
+            transition={{ type: "spring", duration: 2 }}
+        >
             <div className='flex justify-between items-center w-full'>
                 <TopFiveEntry shopName='5. TIMS HAWAIIAN' location='516 2nd St, Davis, CA 95616' />
                 <div className='flex flex-row'>
@@ -76,7 +94,7 @@ const About: FC<AboutProps> = ({}) => {
                 </div>
             </div>
             <a className='pt-4 text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
-        </div>
+        </motion.div>
 
     </div>
   
