@@ -3,7 +3,7 @@
 import { FC, useEffect, useState } from 'react'
 import Image from "next/image";
 import TopFiveEntry from '../components/TopFiveEntry';
-import { ArrowBigDown, ArrowDown, Star } from 'lucide-react';
+import { ArrowBigDown, ArrowBigDownDash, ArrowDown, Ellipsis, Menu, Star } from 'lucide-react';
 import { motion } from "framer-motion";
 
 interface AboutProps {
@@ -44,18 +44,26 @@ const About: FC<AboutProps> = ({}) => {
         closed: { opacity: 0, transition: { duration: 0.5 } }
     }
 
+    const arrowVariants = {
+        arrowUp: {
+            rotate: 180,
+            transition: { type: "spring" }
+        },
+        arrowDown: {
+
+        },
+    }
+
     return (
 
     <div id="homepage" className="rounded-3xl w-full max-w-[120rem] min-h-screen flex flex-col">
 
-        <motion.div className='flex flex-col justify-between items-left pt-10 pb-20 pl-5 rounded-lg mt-5 hover:cursor-pointer'
-            whileHover={{ backgroundColor: "#ECDACC"}}
-            transition={{ duration: 0.6}}
-            onClick={()=>setClickedOne(!clickedOne)}
+        <motion.div className='flex flex-col justify-between pt-10 pb-16 px-5 rounded-lg hover:cursor-pointer'
+
         >
             <div className='flex flex-col justify-between w-full md:flex-row md:items-center '>
                 <TopFiveEntry shopName='1. AKIRA' location='620 W Covell Blvd STE A, Davis, CA 95616'/>
-                <div className='flex flex-row pr-5 pt-2 md:pt-0'>
+                <div className='flex flex-row pt-2 md:pt-0'>
                     <Star className='fill-yellow-500' />
                     <Star className='fill-yellow-500' />
                     <Star className='fill-yellow-500' />
@@ -68,6 +76,14 @@ const About: FC<AboutProps> = ({}) => {
                 <br></br><br></br>
                 <span className='text-green-600'>Affordability</span>, great flavors and variety are their specialty.
             </a>
+            {/* See More Info */}
+            <motion.div className='pt-8'
+                variants={arrowVariants}
+                initial={false}
+                animate={clickedOne? "arrowUp" : "arrowDown"}
+            >
+                <ArrowDown className="scale-150 text-green-800" onClick={()=>setClickedOne(!clickedOne)}/>
+            </motion.div>
 
             <motion.div
                 variants={clickedVariants}
@@ -76,7 +92,7 @@ const About: FC<AboutProps> = ({}) => {
                 className={clickedOne? 'flex flex-col items-center mt-8 text-center w-full max-w-[120rem]' : 'w-0 h-0' }
             >
                 <motion.a variants={itemVariants}>OUR RECS</motion.a>
-                <motion.div className='flex justify-evenly w-full' variants={itemVariants}>
+                <motion.div className='flex justify-evenly w-full pt-4' variants={itemVariants}>
                     <div>
                         <Image 
                             className='flex'
@@ -101,14 +117,14 @@ const About: FC<AboutProps> = ({}) => {
             </motion.div>
         </motion.div>
 
-        <motion.div className='flex flex-col justify-between items-left pt-10 pb-20 pl-5 mt-2 rounded-lg hover:cursor-pointer' 
+        <motion.div className='flex flex-col justify-between items-left pt-10 pb-16 px-5 mt-2 rounded-lg hover:cursor-pointer' 
             whileHover={{ backgroundColor: "#ECDACC"}}
             transition={{ duration: 0.6 }}
             onClick={()=>setClickedTwo(!clickedTwo)}
         >
             <div className='flex flex-col justify-between w-full md:flex-row md:items-center'>
                 <TopFiveEntry shopName='2. YANGKEE DUMPLING' location='2151 Cowell Blvd C, Davis, CA 95618' />
-                <div className='flex flex-row pr-5 pt-2 md:pt-0'>
+                <div className='flex flex-row pt-2 md:pt-0'>
                     <Star className='fill-yellow-500' />
                     <Star className='fill-yellow-500' />
                     <Star className='fill-yellow-500' />
@@ -129,13 +145,13 @@ const About: FC<AboutProps> = ({}) => {
             }
         </motion.div>
 
-        <motion.div className='flex flex-col justify-between pb-20 pt-10 mt-2 pl-5 rounded-lg'
+        <motion.div className='flex flex-col justify-between pb-16 pt-10 mt-2 px-5 rounded-lg'
             whileHover={{ backgroundColor: "#ECDACC"}}
             transition={{ duration: 0.6 }}
         >
             <div className='flex flex-col justify-between w-full md:flex-row md:items-center'>
                 <TopFiveEntry shopName='3. GUADS' location='231 3rd St, Davis, CA 95616' />
-                <div className='flex flex-row pr-5 pt-2 md:pt-0'>
+                <div className='flex flex-row pt-2 md:pt-0'>
                     <Star className='fill-yellow-500' />
                     <Star className='fill-yellow-500' />
                     <Star className='fill-yellow-500' />
@@ -149,13 +165,13 @@ const About: FC<AboutProps> = ({}) => {
             </a>
         </motion.div>
 
-        <motion.div className='flex flex-col justify-between pb-20 pl-5 pt-10 mt-2 rounded-lg'
+        <motion.div className='flex flex-col justify-between pb-16 px-5 pt-10 mt-2 rounded-lg'
             whileHover={{ backgroundColor: "#ECDACC"}}
             transition={{ duration: 0.6 }}
         >
             <div className='flex flex-col justify-between w-full md:flex-row md:items-center'>
                 <TopFiveEntry shopName='4. MIKUNIS' location='500 1st St 19, Davis, CA 95616'/>
-                <div className='flex flex-row pr-5 pt-2 md:pt-0'>
+                <div className='flex flex-row pt-2 md:pt-0'>
                     <Star className='fill-yellow-500' />
                     <Star className='fill-yellow-500' />
                     <Star className='fill-yellow-500' />
@@ -165,13 +181,13 @@ const About: FC<AboutProps> = ({}) => {
             <a className='pt-4 text-lg'>Although their prices are reaching the outer atmospheres, no other sushi place in Davis beats it in <span className='text-green-600'>atmosphere and consistency.</span></a>
         </motion.div>
 
-        <motion.div className='flex flex-col justify-between pb-20 pl-5 mt-2 pt-10 rounded-lg'
+        <motion.div className='flex flex-col justify-between pb-16 px-5 mt-2 pt-10 rounded-lg'
             whileHover={{ backgroundColor: "#ECDACC"}}
             transition={{ duration: 0.6 }}
         >
             <div className='flex flex-col justify-between w-full md:flex-row md:items-center '>
                 <TopFiveEntry shopName='5. TIMS HAWAIIAN D.T.' location='516 2nd St, Davis, CA 95616' />
-                <div className='flex flex-row pr-5 pt-2 md:pt-0'>
+                <div className='flex flex-row pt-2 md:pt-0'>
                     <Star className='fill-yellow-500' />
                     <Star className='fill-yellow-500' />
                     <Star className='fill-yellow-500' />

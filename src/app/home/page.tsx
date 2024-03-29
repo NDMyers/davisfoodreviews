@@ -24,7 +24,7 @@ const [currentPage, setCurrentPage] = useState<'about' | 'work' | 'resume'>('abo
       {/* Logo, name, and NavBar */}
       <div className="flex flex-col w-full max-w-[120rem] items-center justify-between lg:flex-row">
         {/* Logo and name section */}
-        <motion.div className="flex flex-col items-center rounded-lg px-8 border border-transparent hover:cursor-pointer  hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 lg:flex-row lg:pr-8 lg:pl-0"
+        <motion.div className="flex flex-col items-center text-center rounded-lg px-8 border border-transparent hover:cursor-pointer  hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 lg:flex-row lg:pr-8 lg:pl-0"
               onClick={()=>setCurrentPage('about')}
               whileHover = {{ 
                 y: -5
@@ -33,7 +33,7 @@ const [currentPage, setCurrentPage] = useState<'about' | 'work' | 'resume'>('abo
           <Image
                 src="/frog.png"
                 alt="My Logo"
-                className="dark:invert"
+                className=""
                 width={100}
                 height={24}
                 priority

@@ -23,7 +23,7 @@ const Page: FC<PageProps> = ({ }) => {
     <main className="flex min-h-screen flex-col items-center justify-between overflow-x-hidden overflow-y-auto px-8 bg-[rgb(255,243,232)] lg:px-10">
 
         {/* Who are we section */}
-        <div className='flex flex-col justify-center items-center text-7xl min-h-screen tracking-tighter text-center'>
+        <div className='flex flex-col justify-center items-center text-3xl min-h-screen tracking-tighter text-center md:text-7xl'>
             <div>
               there is a lot of food in davis,
               <br></br>
@@ -40,8 +40,8 @@ const Page: FC<PageProps> = ({ }) => {
               />
               <Circle fill="rgb(131,188,148)" className="mt-16 text-transparent size-4 animate-bounce"/>
               <Circle fill="rgb(131,188,148)" className="mt-12 text-transparent size-5 animate-bounce"/>
-              <button className="ml-2 rounded-2xl bg-[rgb(131,188,148)] h-14 w-48 shadow-xl border-4 border-[rgb(109,161,125)] animate-bounce tracking-wider mt-3 hover:cursor-pointer hover:border-amber-700">
-                <Link className="px-5" href="/home">LETS GO</Link>
+              <button className="ml-2 rounded-2xl flex items-center justify-center bg-[rgb(131,188,148)] h-14 w-48 shadow-xl border-4 border-[rgb(109,161,125)] animate-bounce tracking-wider mt-3 hover:cursor-pointer hover:border-amber-700">
+                <Link className="px-5 text-sm md:text-xl" href="/home">LETS GO</Link>
               </button>
             </div>
             {/* <ArrowDown className="w-8 h-8 mt-20 text-slate-700 animate-bounce lg:w-20 lg:h-20"/> */}
