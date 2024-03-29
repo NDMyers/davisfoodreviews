@@ -24,7 +24,7 @@ const [currentPage, setCurrentPage] = useState<'about' | 'work' | 'resume'>('abo
       {/* Logo, name, and NavBar */}
       <div className="flex flex-col w-full max-w-[120rem] items-center justify-between lg:flex-row">
         {/* Logo and name section */}
-        <motion.div className="flex flex-col items-center text-center rounded-lg px-8 border border-transparent hover:cursor-pointer  hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 lg:flex-row lg:pr-8 lg:pl-0"
+        <motion.div className="flex flex-col items-center text-center rounded-lg px-8 border border-transparent hover:cursor-pointer lg:flex-row lg:pr-8 lg:pl-0"
               onClick={()=>setCurrentPage('about')}
               whileHover = {{ 
                 y: -5
@@ -52,7 +52,7 @@ const [currentPage, setCurrentPage] = useState<'about' | 'work' | 'resume'>('abo
         {/* footer */}
         <div className='flex flex-col mt-2 items-center justify-between w-full max-w-[120rem] text-sm text-emerald-700 lg:flex-row'>
           <a href='https://ohnotype.co/fonts/vulf' className='hover:text-emerald-500'> font via ohnotype.co  </a>
-          <a> last updated 3.19.2024 </a>
+          <a> last updated 3.28.2024 </a>
         </div>
       </div>
         

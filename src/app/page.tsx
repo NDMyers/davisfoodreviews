@@ -33,7 +33,7 @@ const Page: FC<PageProps> = ({ }) => {
               <Image
                   src="/frog.png"
                   alt="My Logo"
-                  className="dark:invert pt-10"
+                  className="pt-10"
                   width={200}
                   height={24}
                   priority

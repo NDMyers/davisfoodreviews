@@ -46,7 +46,7 @@ const About: FC<AboutProps> = ({}) => {
 
     const arrowVariants = {
         arrowUp: {
-            rotate: 180,
+            scale: 1.1,
             transition: { type: "spring" }
         },
         arrowDown: {
@@ -58,7 +58,7 @@ const About: FC<AboutProps> = ({}) => {
 
     <div id="homepage" className="rounded-3xl w-full max-w-[120rem] min-h-screen flex flex-col">
 
-        <motion.div className='flex flex-col justify-between pt-10 pb-16 px-5 rounded-lg hover:cursor-pointer'
+        <motion.div className='flex flex-col justify-between py-10 px-5 rounded-lg hover:cursor-pointer'
 
         >
             <div className='flex flex-col justify-between w-full md:flex-row md:items-center '>
@@ -77,12 +77,12 @@ const About: FC<AboutProps> = ({}) => {
                 <span className='text-green-600'>Affordability</span>, great flavors and variety are their specialty.
             </a>
             {/* See More Info */}
-            <motion.div className='pt-8'
+            <motion.div className='pt-8 self-center'
                 variants={arrowVariants}
                 initial={false}
                 animate={clickedOne? "arrowUp" : "arrowDown"}
             >
-                <ArrowDown className="scale-150 text-green-800" onClick={()=>setClickedOne(!clickedOne)}/>
+                <Ellipsis className="scale-150 text-green-800" onClick={()=>setClickedOne(!clickedOne)}/>
             </motion.div>
 
             <motion.div
@@ -117,7 +117,7 @@ const About: FC<AboutProps> = ({}) => {
             </motion.div>
         </motion.div>
 
-        <motion.div className='flex flex-col justify-between items-left pt-10 pb-16 px-5 mt-2 rounded-lg hover:cursor-pointer' 
+        <motion.div className='flex flex-col justify-between items-left py-10 px-5 mt-2 rounded-lg hover:cursor-pointer' 
             whileHover={{ backgroundColor: "#ECDACC"}}
             transition={{ duration: 0.6 }}
             onClick={()=>setClickedTwo(!clickedTwo)}
@@ -145,7 +145,7 @@ const About: FC<AboutProps> = ({}) => {
             }
         </motion.div>
 
-        <motion.div className='flex flex-col justify-between pb-16 pt-10 mt-2 px-5 rounded-lg'
+        <motion.div className='flex flex-col justify-between py-10 mt-2 px-5 rounded-lg'
             whileHover={{ backgroundColor: "#ECDACC"}}
             transition={{ duration: 0.6 }}
         >
@@ -165,7 +165,7 @@ const About: FC<AboutProps> = ({}) => {
             </a>
         </motion.div>
 
-        <motion.div className='flex flex-col justify-between pb-16 px-5 pt-10 mt-2 rounded-lg'
+        <motion.div className='flex flex-col justify-between py-10 px-5 mt-2 rounded-lg'
             whileHover={{ backgroundColor: "#ECDACC"}}
             transition={{ duration: 0.6 }}
         >
@@ -181,7 +181,7 @@ const About: FC<AboutProps> = ({}) => {
             <a className='pt-4 text-lg'>Although their prices are reaching the outer atmospheres, no other sushi place in Davis beats it in <span className='text-green-600'>atmosphere and consistency.</span></a>
         </motion.div>
 
-        <motion.div className='flex flex-col justify-between pb-16 px-5 mt-2 pt-10 rounded-lg'
+        <motion.div className='flex flex-col justify-between py-10 px-5 mt-2 rounded-lg'
             whileHover={{ backgroundColor: "#ECDACC"}}
             transition={{ duration: 0.6 }}
         >
